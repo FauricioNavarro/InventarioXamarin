@@ -150,4 +150,7 @@
   <data name="EtiquetaProductos" xml:space="preserve">
     <value>Productos</value>
   </data>
+  <data name="TituloApp" xml:space="preserve">
+    <value>Inventario</value>
+  </data>
 </root>

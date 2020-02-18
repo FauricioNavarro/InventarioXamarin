@@ -158,5 +158,14 @@ namespace Inventario.Resx {
                 return ResourceManager.GetString("EtiquetaProductos", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventario.
+        /// </summary>
+        internal static string TituloApp {
+            get {
+                return ResourceManager.GetString("TituloApp", resourceCulture);
+            }
+        }
     }
 }

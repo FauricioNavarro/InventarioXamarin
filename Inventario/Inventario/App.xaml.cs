@@ -43,11 +43,12 @@ namespace Inventario
             InitializeComponent();
             //
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("Menu");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
-        {
+        {            
+            containerRegistry.RegisterForNavigation<Views.Menu, MenuViewModel>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<Productos, ProductosViewModel>();

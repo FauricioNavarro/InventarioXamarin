@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario", "Inventario\Inventario\Inventario.csproj", "{4B48437B-D6F6-42F5-8C68-64C04D9A3CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventario.Android", "Inventario\Inventario.Android\Inventario.Android.csproj", "{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B48437B-D6F6-42F5-8C68-64C04D9A3CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B48437B-D6F6-42F5-8C68-64C04D9A3CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B48437B-D6F6-42F5-8C68-64C04D9A3CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B48437B-D6F6-42F5-8C68-64C04D9A3CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF31C98-9A63-42B9-8A24-CBF2F1297BD0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16D70493-19BB-4B10-A88D-C7C06132B8C3}
+	EndGlobalSection
+EndGlobal

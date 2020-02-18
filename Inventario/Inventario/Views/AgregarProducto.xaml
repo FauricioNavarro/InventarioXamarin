@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:resources="clr-namespace:Inventario.Resx"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Inventario.Views.AgregarProducto">
+
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand">
+
+        <Entry x:Name="Nombre" Text="{Binding Nombre}" Placeholder="{x:Static resources:AppResources.EtiquetaNombre}"></Entry>
+        <Entry x:Name="Codigo" Text="{Binding Codigo}" Placeholder="{x:Static resources:AppResources.EtiquetaCodigo}"></Entry>
+        <Button Text="Guardar" 
+                Command="{Binding agregarProducto}"
+                Margin="0,25,0,0"/>
+            
+    </StackLayout>       
+  
+</ContentPage>

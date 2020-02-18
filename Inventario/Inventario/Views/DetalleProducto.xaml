@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Inventario.Views.DetalleProducto"
+             xmlns:resources="clr-namespace:Inventario.Resx">
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Producto.Id,StringFormat='Identificador: {0}'}"></Label>
+            <Label Text="{Binding Producto.Nombre,StringFormat='Nombre: {0}'}"></Label>
+            <Label Text="{Binding Producto.Codigo,StringFormat='Código: {0}'}"></Label>
+            <Label x:Name="Existencias" Text="{Binding Producto.Existencias,StringFormat='Existencias: {0}'}"></Label>
+        </StackLayout>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="{x:Static resources:AppResources.BotonComprar}" Command="{Binding ComprarProducto}" Grid.Row="0" Grid.Column="0"></Button>
+            <Button Text="{x:Static resources:AppResources.BotonFacturar}" Command="{Binding FacturarProducto}" Grid.Row="0" Grid.Column="1"></Button>
+        </Grid>
+    </StackLayout>
+    
+
+
+
+</ContentPage>

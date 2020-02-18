@@ -57,6 +57,7 @@ namespace Inventario
             containerRegistry.RegisterForNavigation<Compras, ComprasViewModel>();
             containerRegistry.RegisterForNavigation<FacturaProducto, FacturaProductoViewModel>();
             containerRegistry.RegisterForNavigation<Facturas, FacturasViewModel>();
+            containerRegistry.RegisterForNavigation<EditarProducto, EditarProductoViewModel>();
         }
     }
 }

@@ -24,7 +24,9 @@ namespace Inventario.Datos
         {
             try
             {
-                return _database.Table<Producto>().ToListAsync();
+                return _database.Table<Producto>()
+                    //.Where(x => x.Estado == true)
+                    .ToListAsync();
 
 
             }catch(Exception ex)
@@ -52,6 +54,19 @@ namespace Inventario.Datos
             try
             {
                 return _database.DeleteAsync(producto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        public Task<int> EditProductoAsync(Producto producto)
+        {
+            try
+            {
+                return _database.UpdateAsync(producto);
             }
             catch (Exception ex)
             {

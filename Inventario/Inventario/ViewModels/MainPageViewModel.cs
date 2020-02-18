@@ -38,7 +38,7 @@ namespace Inventario.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Main Page";
+            Title = "Inventario";
             GetProductos = new DelegateCommand(EjecutarGetProductos);
             GetCompras = new DelegateCommand(EjecutarGetCompras);
             GetFacturas = new DelegateCommand(EjecutarGetFacturas);

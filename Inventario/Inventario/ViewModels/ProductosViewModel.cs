@@ -19,18 +19,6 @@ namespace Inventario.ViewModels
         #region Parámetros        
         private IPageDialogService _pageDialogService { get; set; }
 
-        public ICommand EliminaProducto
-        {
-            get
-            {
-                return new Command((e) =>
-                {
-                    var item = (e as Producto);
-                    EliminarProductoSelecctionado(item);
-                });
-            }
-        }
-
         private Producto _productoSeleccionado { get; set; }
         public Producto ProductoSeleccionado
         {
@@ -56,6 +44,29 @@ namespace Inventario.ViewModels
         public DelegateCommand AgregarProducto =>
             _agregarProducto ?? (_agregarProducto = new DelegateCommand(accionAgregarProducto));
 
+        public ICommand EliminaProducto
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    var item = (e as Producto);
+                    EliminarProductoSelecctionado(item);
+                });
+            }
+        }
+
+        public ICommand EditarProducto
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    var item = (e as Producto);
+                    EditarProductoSelecctionado(item);
+                });
+            }
+        }
         #endregion
 
         #region Constructor
@@ -84,16 +95,6 @@ namespace Inventario.ViewModels
             GetProducto();
         }
 
-        protected async void EliminarProductoSelecctionado(Producto producto)
-        {
-            var result = await _pageDialogService.DisplayAlertAsync(Mensajes.tituloEliminarProducto, Mensajes.textoEliminarProducto, Mensajes.respuestaSi, Mensajes.respuestaNo);
-            if(result)
-            {
-                await App.Database.DeleteProductoAsync(producto);
-                GetProducto();
-            }
-        }
-
         protected async void VerProductoSelecctionado()
         {
             var parameters = new NavigationParameters();
@@ -105,7 +106,25 @@ namespace Inventario.ViewModels
         protected async void GetProducto()
         {
             ListaProducto = await App.Database.GetProductosAsync();
-        }        
+        }
+
+        protected async void EliminarProductoSelecctionado(Producto producto)
+        {
+            var result = await _pageDialogService.DisplayAlertAsync(Mensajes.tituloEliminarProducto, Mensajes.textoEliminarProducto, Mensajes.respuestaSi, Mensajes.respuestaNo);
+            if (result)
+            {
+                await App.Database.DeleteProductoAsync(producto);
+                GetProducto();
+            }
+        }
+        protected async void EditarProductoSelecctionado(Producto producto)
+        {
+            var parametros = new NavigationParameters();
+            parametros.Add("productoSeleccionado", producto);
+
+            await NavigationService.NavigateAsync("EditarProducto", parametros);
+            
+        }
         #endregion
     }
 }

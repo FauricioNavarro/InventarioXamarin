@@ -10,7 +10,7 @@
                  VerticalOptions="CenterAndExpand">
 
         <Entry x:Name="Descripcion" Text="{Binding Descripcion}" Placeholder="{x:Static resources:AppResources.EtiquetaDescripcion}"></Entry>
-        <Entry x:Name="Codigo" Text="{Binding Cantidad}" Placeholder="{x:Static resources:AppResources.EtiquetaCantidad}"></Entry>
+        <Entry x:Name="Codigo" Text="{Binding Cantidad}" Placeholder="{x:Static resources:AppResources.EtiquetaCantidad}" Keyboard="Numeric"></Entry>
         <Button Text="{x:Static resources:AppResources.BotonGuardar}" 
                 Command="{Binding FacturarProducto}"
                 Margin="0,25,0,0"/>

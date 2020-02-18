@@ -124,6 +124,15 @@ namespace Inventario.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Estado.
+        /// </summary>
+        internal static string EtiquetaEstado {
+            get {
+                return ResourceManager.GetString("EtiquetaEstado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Facturas.
         /// </summary>
         internal static string EtiquetaFacturas {

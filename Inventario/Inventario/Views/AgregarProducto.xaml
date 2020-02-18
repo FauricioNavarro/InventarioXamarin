@@ -11,8 +11,8 @@
 
         <Entry x:Name="Nombre" Text="{Binding Nombre}" Placeholder="{x:Static resources:AppResources.EtiquetaNombre}"></Entry>
         <Entry x:Name="Codigo" Text="{Binding Codigo}" Placeholder="{x:Static resources:AppResources.EtiquetaCodigo}"></Entry>
-        <Button Text="Guardar" 
-                Command="{Binding agregarProducto}"
+        <Button Text="{x:Static resources:AppResources.BotonGuardar}" 
+                Command="{Binding AgregarProducto}"
                 Margin="0,25,0,0"/>
             
     </StackLayout>       

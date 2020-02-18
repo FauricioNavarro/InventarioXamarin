@@ -25,8 +25,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Text="{x:Static resources:AppResources.BotonComprar}" Command="{Binding ComprarProducto}" Grid.Row="0" Grid.Column="0"></Button>
-            <Button Text="{x:Static resources:AppResources.BotonFacturar}" Command="{Binding FacturarProducto}" Grid.Row="0" Grid.Column="1"></Button>
+            <Button Text="{x:Static resources:AppResources.BotonComprar}" Command="{Binding ComprarProducto}" IsEnabled="{Binding Producto.Estado}" Grid.Row="0" Grid.Column="0"></Button>
+            <Button Text="{x:Static resources:AppResources.BotonFacturar}" Command="{Binding FacturarProducto}" IsEnabled="{Binding Producto.Estado}" Grid.Row="0" Grid.Column="1"></Button>
         </Grid>
     </StackLayout>
     

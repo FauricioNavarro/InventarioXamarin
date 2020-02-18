@@ -29,7 +29,13 @@ namespace Inventario.ViewModels
             set { SetProperty(ref _codigo, value); }
         }
 
-        public DelegateCommand agregarProducto { get; private set; }
+        private DelegateCommand _agregarProducto;
+        public DelegateCommand AgregarProducto
+        {
+            get { return _agregarProducto; }
+            set { SetProperty(ref _agregarProducto, value); }
+        }
+        
         #endregion
 
         #region Constructor
@@ -37,14 +43,14 @@ namespace Inventario.ViewModels
             : base(navigationService)
         {
             _pageDialogService = pageDialogService;
-            agregarProducto = new DelegateCommand(AgregarProducto);
-            agregarProducto.ObservesProperty(()=> Nombre);
-            agregarProducto.ObservesProperty(()=> Codigo);
+            AgregarProducto = new DelegateCommand(EjecutaAgregarProducto);
+            AgregarProducto.ObservesProperty(()=> Nombre);
+            AgregarProducto.ObservesProperty(()=> Codigo);
         }
         #endregion
 
         #region Métodos
-        public async void AgregarProducto()
+        protected async void EjecutaAgregarProducto()
         {
             if(Nombre != null && Codigo != null && !Nombre.Equals("") && !Codigo.Equals(""))
             {
@@ -56,7 +62,6 @@ namespace Inventario.ViewModels
             {
                 await _pageDialogService.DisplayAlertAsync(Mensajes.tituloError, Mensajes.errorAgregarProducto, Mensajes.respuestaOk);
             }
-
         }
         #endregion
     }

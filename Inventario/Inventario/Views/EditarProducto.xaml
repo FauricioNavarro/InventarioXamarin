@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Inventario.Views.EditarProducto"
+             xmlns:resources="clr-namespace:Inventario.Resx">
+    
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Entry Text="{Binding Producto.Nombre}" Placeholder="{x:Static resources:AppResources.EtiquetaNombre}"></Entry>
+        <Entry Text="{Binding Producto.Codigo}" Placeholder="{x:Static resources:AppResources.EtiquetaCodigo}"></Entry>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="{x:Static resources:AppResources.EtiquetaEstado}" Grid.Row="0" Grid.Column="0"></Label>
+            <Switch IsToggled="{Binding Producto.Estado, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+        
+
+        <Button Text="{x:Static resources:AppResources.BotonGuardar}" 
+                Command="{Binding EditarProducto}"
+                Margin="0,25,0,0"/>
+    </StackLayout>
+    
+</ContentPage>

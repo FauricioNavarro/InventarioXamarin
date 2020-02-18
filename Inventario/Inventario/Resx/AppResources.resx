@@ -138,6 +138,9 @@
   <data name="EtiquetaDescripcion" xml:space="preserve">
     <value>Descripción</value>
   </data>
+  <data name="EtiquetaEstado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
   <data name="EtiquetaFacturas" xml:space="preserve">
     <value>Facturas</value>
   </data>

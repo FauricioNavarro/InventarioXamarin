@@ -12,7 +12,7 @@
 
     <StackLayout HorizontalOptions="CenterAndExpand" 
                  VerticalOptions="CenterAndExpand">
-        <ListView x:Name="listaProductos"
+        <ListView x:Name="listaProductos" RowHeight="80"
                   ItemsSource="{Binding ListaProducto}"
                   SelectedItem="{Binding ProductoSeleccionado}">
             <ListView.ItemTemplate>
@@ -28,24 +28,22 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Id,StringFormat='Id: {0}'}" Grid.Row="0" Grid.Column="0" 
-                                       Margin="10,0,0,0"/>
-                                <Label Text="{Binding Codigo,StringFormat='Codigo: {0}'}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                                <Label Text="{Binding Nombre,StringFormat='Nombre: {0}'}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                                       Margin="10,0,0,0"/>
+                                <Label Text="{Binding Id,StringFormat='Id: {0}'}" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"/>
+                                <Label Text="{Binding Codigo,StringFormat='Codigo: {0}'}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+                                <Label Text="{Binding Nombre,StringFormat='Nombre: {0}'}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
 
-                                <ImageButton Source="delete_logo.png" WidthRequest="10" HeightRequest="10"
-                                            Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                            Margin="40,0,0,0" Padding="5,5,5,5" BackgroundColor="Transparent"
-                                            BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
-                                            Command="{Binding EliminaProducto}"  
-                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
-
-                                <ImageButton Source="edit_logo.png" WidthRequest="10" HeightRequest="10" 
-                                            Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                            Margin="40,0,0,0" Padding="5,5,5,5" BackgroundColor="Transparent"
+                                <ImageButton Source="edit_logo.png" WidthRequest="10" HeightRequest="10"
+                                            Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2"
+                                            Margin="30,10" Padding="15" BackgroundColor="Transparent"
                                             BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
                                             Command="{Binding EditarProducto}"  
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
+
+                                <ImageButton Source="delete_logo.png" WidthRequest="10" HeightRequest="10"
+                                            Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Grid.ColumnSpan="2"
+                                            Margin="30,10" Padding="15" BackgroundColor="Transparent"
+                                            BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
+                                            Command="{Binding EliminaProducto}"  
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
                             </Grid>
                         </ViewCell.View>

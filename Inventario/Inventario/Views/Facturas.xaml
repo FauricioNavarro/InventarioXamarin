@@ -7,7 +7,7 @@
     <StackLayout HorizontalOptions="CenterAndExpand" 
                  VerticalOptions="CenterAndExpand">
         <ListView x:Name="listaProductos"
-                  ItemsSource="{Binding ListaFacturas}">
+                  ItemsSource="{Binding ListaFacturas}" RowHeight="120">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,9 +22,9 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding Id,StringFormat='Id: {0}'}" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"/>
-                                <Label Text="{Binding Cantidad,StringFormat='Cantidad: {0}'}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                                <Label Text="{Binding ProductoId,StringFormat='Id Producto: {0}'}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"/>
-                                <Label Text="{Binding Fecha,StringFormat='Fecha: {0}'}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+                                <Label Text="{Binding Cantidad,StringFormat='Cantidad: {0}'}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+                                <Label Text="{Binding ProductoId,StringFormat='Id Producto: {0}'}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
+                                <Label Text="{Binding Fecha,StringFormat='Fecha: {0}'}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
                             </Grid>
                         </ViewCell.View>
                     </ViewCell>

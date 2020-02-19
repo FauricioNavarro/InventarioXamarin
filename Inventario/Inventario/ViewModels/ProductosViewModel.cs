@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Inventario.Models;
+using Inventario.Resx;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Prism.Services;
-using Inventario.Utils;
 
 namespace Inventario.ViewModels
 {
@@ -110,7 +110,7 @@ namespace Inventario.ViewModels
 
         protected async void EliminarProductoSelecctionado(Producto producto)
         {
-            var result = await _pageDialogService.DisplayAlertAsync(Mensajes.tituloEliminarProducto, Mensajes.textoEliminarProducto, Mensajes.respuestaSi, Mensajes.respuestaNo);
+            var result = await _pageDialogService.DisplayAlertAsync(AppResources.TituloEliminarProducto, AppResources.TextoEliminarProducto, AppResources.EtiquetaSi, AppResources.EtiquetaNo);
             if (result)
             {
                 await App.Database.DeleteProductoAsync(producto);

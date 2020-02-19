@@ -50,7 +50,6 @@ namespace Inventario
         {            
             containerRegistry.RegisterForNavigation<Views.Menu, MenuViewModel>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<Productos, ProductosViewModel>();
             containerRegistry.RegisterForNavigation<AgregarProducto, AgregarProductoViewModel>();
             containerRegistry.RegisterForNavigation<DetalleProducto, DetalleProductoViewModel>();

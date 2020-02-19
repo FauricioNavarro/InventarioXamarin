@@ -88,6 +88,60 @@ namespace Inventario.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Se presentó un error al crear el producto.
+        /// </summary>
+        internal static string ErrorAgregarProducto {
+            get {
+                return ResourceManager.GetString("ErrorAgregarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La cantidad no puede ser negativa.
+        /// </summary>
+        internal static string ErrorCantidad {
+            get {
+                return ResourceManager.GetString("ErrorCantidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se presentó un error al comprar uno o más producto(s).
+        /// </summary>
+        internal static string ErrorComprarProducto {
+            get {
+                return ResourceManager.GetString("ErrorComprarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se presentó un error al editar el producto.
+        /// </summary>
+        internal static string ErrorEditarProducto {
+            get {
+                return ResourceManager.GetString("ErrorEditarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Se presentó un error al facturar uno o más producto(s).
+        /// </summary>
+        internal static string ErrorFacturarProducto {
+            get {
+                return ResourceManager.GetString("ErrorFacturarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Activo.
+        /// </summary>
+        internal static string EtiquetaActivo {
+            get {
+                return ResourceManager.GetString("EtiquetaActivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cantidad.
         /// </summary>
         internal static string EtiquetaCantidad {
@@ -124,6 +178,15 @@ namespace Inventario.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string EtiquetaError {
+            get {
+                return ResourceManager.GetString("EtiquetaError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Estado.
         /// </summary>
         internal static string EtiquetaEstado {
@@ -142,11 +205,38 @@ namespace Inventario.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inactivo.
+        /// </summary>
+        internal static string EtiquetaInactivo {
+            get {
+                return ResourceManager.GetString("EtiquetaInactivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string EtiquetaNo {
+            get {
+                return ResourceManager.GetString("EtiquetaNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nombre.
         /// </summary>
         internal static string EtiquetaNombre {
             get {
                 return ResourceManager.GetString("EtiquetaNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        internal static string EtiquetaOk {
+            get {
+                return ResourceManager.GetString("EtiquetaOk", resourceCulture);
             }
         }
         
@@ -160,11 +250,38 @@ namespace Inventario.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sí.
+        /// </summary>
+        internal static string EtiquetaSi {
+            get {
+                return ResourceManager.GetString("EtiquetaSi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Esta seguro del eliminar este producto.
+        /// </summary>
+        internal static string TextoEliminarProducto {
+            get {
+                return ResourceManager.GetString("TextoEliminarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inventario.
         /// </summary>
         internal static string TituloApp {
             get {
                 return ResourceManager.GetString("TituloApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eliminar Producto.
+        /// </summary>
+        internal static string TituloEliminarProducto {
+            get {
+                return ResourceManager.GetString("TituloEliminarProducto", resourceCulture);
             }
         }
     }

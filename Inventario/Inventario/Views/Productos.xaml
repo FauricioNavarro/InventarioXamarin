@@ -36,14 +36,14 @@
 
                                 <ImageButton Source="delete_logo.png" WidthRequest="10" HeightRequest="10"
                                             Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                            Margin="40,0,40,0" Padding="5,5,5,5" BackgroundColor="Transparent"
+                                            Margin="40,0,0,0" Padding="5,5,5,5" BackgroundColor="Transparent"
                                             BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
                                             Command="{Binding EliminaProducto}"  
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
 
                                 <ImageButton Source="edit_logo.png" WidthRequest="10" HeightRequest="10" 
                                             Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                            Margin="40,0,40,0" Padding="5,5,5,5" BackgroundColor="Transparent"
+                                            Margin="40,0,0,0" Padding="5,5,5,5" BackgroundColor="Transparent"
                                             BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
                                             Command="{Binding EditarProducto}"  
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>

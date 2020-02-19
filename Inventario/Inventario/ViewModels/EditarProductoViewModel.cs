@@ -5,8 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Inventario.Models;
+using Inventario.Resx;
 using Prism.Services;
-using Inventario.Utils;
 
 namespace Inventario.ViewModels
 {
@@ -54,7 +54,7 @@ namespace Inventario.ViewModels
             }
             else
             {
-                await _pageDialogService.DisplayAlertAsync(Mensajes.tituloError, Mensajes.errorEditarProducto, Mensajes.respuestaOk);
+                await _pageDialogService.DisplayAlertAsync(AppResources.EtiquetaError, AppResources.ErrorEditarProducto, AppResources.EtiquetaOk);
             }
         }
         #endregion

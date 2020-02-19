@@ -6,8 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Inventario.Models;
-using Inventario.Utils;
 using Prism.Services;
+using Inventario.Resx;
 
 namespace Inventario.ViewModels
 {
@@ -57,13 +57,13 @@ namespace Inventario.ViewModels
         protected async void EjecutarComprarProducto()
         {
             Compra compra = new Compra(Descripcion,Cantidad);
-            if (Descripcion != null && Cantidad != 0 && !Descripcion.Equals("") && !Cantidad.Equals(""))
+            if (Descripcion != null && Cantidad > 0 && !Descripcion.Equals("") && !Cantidad.Equals(""))
             {
                 await App.Database.ComprarProductoAsync(productoAux.Id, compra);
             }
             else
             {
-                await _pageDialogService.DisplayAlertAsync(Mensajes.tituloError, Mensajes.errorComprarProducto, Mensajes.respuestaOk);
+                await _pageDialogService.DisplayAlertAsync(AppResources.EtiquetaError, AppResources.ErrorCantidad, AppResources.EtiquetaOk);
             }
             await NavigationService.GoBackAsync();
         }

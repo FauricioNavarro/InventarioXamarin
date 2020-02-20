@@ -10,8 +10,8 @@
         <ToolbarItem Text="+" Command="{Binding AgregarProducto}" />
     </ContentPage.ToolbarItems>
 
-    <StackLayout HorizontalOptions="CenterAndExpand" 
-                 VerticalOptions="CenterAndExpand">
+    <StackLayout HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand">
         <ListView x:Name="listaProductos" RowHeight="80"
                   ItemsSource="{Binding ListaProducto}"
                   SelectedItem="{Binding ProductoSeleccionado}">

@@ -32,14 +32,14 @@
                                 <Label Text="{Binding Codigo,StringFormat='Codigo: {0}'}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
                                 <Label Text="{Binding Nombre,StringFormat='Nombre: {0}'}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0"/>
 
-                                <ImageButton Source="edit_logo.png" WidthRequest="10" HeightRequest="10"
+                                <ImageButton Source="white_pencil.png" WidthRequest="10" HeightRequest="10"
                                             Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2"
                                             Margin="30,10" Padding="15" BackgroundColor="Transparent"
                                             BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 
                                             Command="{Binding EditarProducto}"  
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
 
-                                <ImageButton Source="delete_logo.png" WidthRequest="10" HeightRequest="10"
+                                <ImageButton Source="white_garbage.png" WidthRequest="10" HeightRequest="10"
                                             Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Grid.ColumnSpan="2"
                                             Margin="30,10" Padding="15" BackgroundColor="Transparent"
                                             BindingContext="{Binding Source={x:Reference listaProductos}, Path=BindingContext}" 

@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:Inventario.Converters"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Inventario.Views.Productos"
              Title=""
@@ -13,11 +15,11 @@
     <StackLayout HorizontalOptions="FillAndExpand" 
                  VerticalOptions="FillAndExpand">
         <ListView x:Name="listaProductos" RowHeight="80"
-                  ItemsSource="{Binding ListaProducto}"
-                  SelectedItem="{Binding ProductoSeleccionado}">
+                  ItemsSource="{Binding ListaProducto}">
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell Tapped="ViewCell_Tapped">
                         <ViewCell.View>
                             <Grid x:Name="Item">
                                 <Grid.RowDefinitions>
@@ -50,6 +52,12 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+
+            <ListView.Behaviors>
+                <b:EventToCommandBehavior EventName="ItemTapped" 
+                                          Command="{Binding ProductoSeleccionado}"
+                                          EventArgsConverter="{converters:ItemTappedEventArgsConverter}" />
+            </ListView.Behaviors>
         </ListView>
     </StackLayout>
 </ContentPage>

@@ -9,14 +9,23 @@ namespace Inventario.Views
 {
     public partial class Productos : ContentPage
     {
+        ViewCell lastCell;
+
         public Productos()
         {
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        private void ViewCell_Tapped(object sender, System.EventArgs e)
         {
-            base.OnAppearing();
+            if (lastCell != null)
+                lastCell.View.BackgroundColor = Color.Transparent;
+            var viewCell = (ViewCell)sender;
+            if (viewCell.View != null)
+            {
+                viewCell.View.BackgroundColor = Color.Gray;
+                lastCell = viewCell;
+            }
         }
     }
 }

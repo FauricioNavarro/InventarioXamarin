@@ -19,19 +19,7 @@ namespace Inventario.ViewModels
         #region Parámetros        
         private IPageDialogService _pageDialogService { get; set; }
 
-        private Producto _productoSeleccionado { get; set; }
-        public Producto ProductoSeleccionado
-        {
-            get { return _productoSeleccionado; }
-            set
-            {
-                if (_productoSeleccionado != value)
-                {
-                    _productoSeleccionado = value;
-                    VerProductoSelecctionado();
-                }
-            }
-        }
+        public DelegateCommand<Producto> ProductoSeleccionado { get; private set; }        
 
         private List<Producto> _listaProducto;
         public List<Producto> ListaProducto
@@ -75,6 +63,7 @@ namespace Inventario.ViewModels
         {
             Title = "Productos";
             _pageDialogService = pageDialogService;
+            ProductoSeleccionado = new DelegateCommand<Producto>(VerProductoSeleccionado);
             GetProducto();
         }
         #endregion
@@ -95,10 +84,10 @@ namespace Inventario.ViewModels
             GetProducto();
         }
 
-        protected async void VerProductoSelecctionado()
+        protected async void VerProductoSeleccionado(Producto producto)
         {
             var parameters = new NavigationParameters();
-            parameters.Add("productoSeleccionado", ProductoSeleccionado);
+            parameters.Add("productoSeleccionado", producto);
 
             await NavigationService.NavigateAsync("DetalleProducto", parameters);
         }
